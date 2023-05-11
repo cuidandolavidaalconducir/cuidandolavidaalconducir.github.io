@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad</title>
+    <script src="https://kit.fontawesome.com/19c3fd4500.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="CSS/style-comunidad.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <div class="header-superior">
+            <div class="logo">
+                <a href="inicio.html">
+                    <img src="IMG/LogoMinimalista (1).svg" alt="">
+                </a>
+            </div>
+            <!--<div class="search">
+                <input type="search" placeholder="¿Qué deseas buscar?">
+            </div>-->
+        </div>
+        <div class="container-menu">
+
+            <div class="menu">
+                <input type="checkbox" id="check-menu">
+                <label id="#label-check" for="check-menu">
+                    <i class="fa-solid fa-bars icon-menu"></i>
+                </label>
+                <nav>
+                    <ul>
+
+
+                        <!-- <li><a href="index.html" id="selected"></a></li>-->
+                        <li><a href="inicio.html">Inicio</a></li>
+                        <li><a href="#">Multimedia</a>
+                            <ul>
+                                <li><a href="videos.html">VideosㅤEducativos</a></li>
+                               <!-- <li><a href="imagenes.html">Imagenes</a></li> -->
+                               <!-- <li><a href="archivos.html">Archivos</a></li> -->
+                                <li><a href="accidentes.html">Accidentes</a></li>
+                                <li><a href="transito.html">Transito</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="comunidad.html">Comunidad</a></li>
+                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="https://www.digesett.gob.do/" target="_blank">Digesset</a></li>
+                        <li><a href="https://intrant.gob.do/index.php" target="_blank">Intrant</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+    </header>
+
+    <main>
+        <article>
+            <h1 class="comtitle">Comentarios</h1>
+
+
+            <!-- ------------------------------------  comentaarios --------------------------------------- -->
+
+
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://cuidando-la-vida-al-conducir.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                    by Disqus.</a></noscript>
+
+
+            <script id="dsq-count-scr" src="//cuidando-la-vida-al-conducir.disqus.com/count.js" async></script>
+            <!-- ------------------------------------ ^^ comentaarios ^^ --------------------------------------- -->
+
+
+
+        </article>
+
+
+    </main>
+
+
+    <!-- -----------------------------------------------FOOTER----------------------------------------------------------->
+
+
+    <footer>
+
+        <div class="container-footer">
+            <div class="box-footer">
+                <div class="logo">
+                    <a href="inicio.html">
+                        <img class="logofooter" src="IMG/LogoMinimalista (2).svg" alt="">
+                    </a>
+                </div>
+                <div class="terms">
+                    <p> ¡Conduce con responsabilidad y ayuda a salvar vidas!</p>
+                </div>
+            </div>
+            <!-- <div class="box-footer">
+            <h2>Prueba1</h2>
+            <a href="#">info1</a>
+            <a href="#">info2</a>
+            <a href="#">info3</a>
+            <a href="#">info4</a>
+        </div>-->
+
+            <div class="box-footer">
+                <h2>Menú</h2>
+                <a href="/comunidad.html">Comunidad</a>
+                <a href="nosotros.html">Sobre Nosotros</a>
+                <a href="https://www.digesett.gob.do/" target="_blank">Digesett</a>
+                <a href="https://intrant.gob.do/index.php" target="_blank">Intrant</a>
+            </div>
+
+            <div class="box-footer">
+                <h2>Redes</h2>
+                <a href="https://www.facebook.com/profile.php?id=100090470194961" target="_blank"> <i
+                        class="fa-brands fa-square-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/cuidandolavidaalconducir/" target="_blank"> <i
+                        class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://twitter.com/CLVAC_RD" target="_blank"> <i class="fa-brands fa-twitter"></i> Twitter</a>
+                <a href="https://www.youtube.com/channel/UCpHDKNi6QFAM7MFmRfom_lw" target="_blank"> <i
+                        class="fa-brands fa-youtube"></i> Youtube</a>
+            </div>
+
+        </div>
+        <div class="box-copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2023 <b>Educación Vial.</b></p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

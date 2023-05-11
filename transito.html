@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transito</title>
+    <script src="https://kit.fontawesome.com/19c3fd4500.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style-multimedia.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-superior">
+            <div class="logo">
+                <a href="inicio.html">
+                    <img src="/IMG/LogoMinimalista (1).svg" alt="">
+                </a>
+            </div>
+            <!--<div class="search">
+                <input type="search" placeholder="¿Qué deseas buscar?">
+            </div>-->
+        </div>
+        <div class="container-menu">
+
+            <div class="menu">
+                <input type="checkbox" id="check-menu">
+                <label id="#label-check" for="check-menu">
+                    <i class="fa-solid fa-bars icon-menu"></i>
+                </label>
+                <nav>
+                    <ul>
+
+
+                        <!-- <li><a href="index.html" id="selected"></a></li>-->
+                        <li><a href="inicio.html">Inicio</a></li>
+                        <li><a href="#">Multimedia</a>
+                            <ul>
+                                <li><a href="videos.html">VideosㅤEducativos</a></li>
+                                <!--<li><a href="imagenes.html">Imagenes</a></li>-->
+                                <!--<li><a href="archivos.html">Archivos</a></li>-->
+                                <li><a href="accidentes.html">Accidentes</a></li>
+                                <li><a href="transito.html">Transito</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="comunidad.html">Comunidad</a></li>
+                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="https://www.digesett.gob.do/" target="_blank">Digesset</a></li>
+                        <li><a href="https://intrant.gob.do/index.php" target="_blank">Intrant</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+    </header>
+
+
+    <main>
+
+        <h3 class="heading">galeria de videos</h3>
+
+        <div class="container">
+
+            <div class="main-video">
+                <div class="video">
+                    <video src="VID/20230215_073615.mp4" controls muted autoplay></video>
+                    <!-- <iframe width="100%" height="440" src="https://www.youtube.com/embed/j-JwuVEjrqM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe> -->
+                    <h3 class="title">01. nombre de video</h3>
+                </div>
+            </div>
+
+            <div class="video-list">
+                <div class="vid active">
+                    <video src="VID/20230215_073615.mp4" muted></video>
+                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/j-JwuVEjrqM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe> -->
+                    <h3 class="title">01. nombre de video</h3>
+                </div>
+                <div class="vid">
+                    <video src="VID/20230216_120804.mp4" muted></video>
+                    <h3 class="title">02. nombre de video</h3>
+                </div>
+                <div class="vid">
+                    <video src="VID/20230221_073728.mp4" muted></video>
+                    <h3 class="title">03. nombre de video</h3>
+                </div>
+                <div class="vid">
+                    <video src="VID/20230221_073823.mp4" muted></video>
+                    <h3 class="title">04. nombre de video</h3>
+                </div>
+                <div class="vid">
+                    <video src="VID/20230221_073823.mp4" muted></video>
+                    <h3 class="title">05. nombre de video</h3>
+                </div>
+                <div class="vid">
+                    <video src="VID/20230221_073823.mp4" muted></video>
+                    <h3 class="title">06. nombre de video</h3>
+                </div>
+                <div class="vid">
+                    <video src="VID/20230221_073823.mp4" muted></video>
+                    <h3 class="title">07. nombre de video</h3>
+                </div>
+                <div class="vid">
+                    <video src="VID/20230221_073823.mp4" muted></video>
+                    <h3 class="title">08. nombre de video</h3>
+                </div>
+                <div class="vid">
+                    <video src="VID/20230221_073823.mp4" muted></video>
+                    <h3 class="title">09. nombre de video</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script>
+
+            let listVideo = document.querySelectorAll('.video-list .vid');
+            let mainVideo = document.querySelector('.main-video video');
+            let title = document.querySelector('.main-video .title');
+
+            listVideo.forEach(video => {
+                video.onclick = () => {
+                    listVideo.forEach(vid => vid.classList.remove('active'));
+                    video.classList.add('active');
+                    if (video.classList.contains('active')) {
+                        let src = video.children[0].getAttribute('src');
+                        mainVideo.src = src;
+                        let text = video.children[1].innerHTML;
+                        title.innerHTML = text;
+                    };
+                };
+            });
+
+
+        </script>
+
+
+
+        <!----------------------------------------------------  Comentarios ----------------------------------------------------->
+        <article>
+
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://cuidando-la-vida-al-conducir-transito.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                    by Disqus.</a></noscript>
+
+
+            <script id="dsq-count-scr" src="//cuidando-la-vida-al-conducir-transito.disqus.com/count.js" async></script>
+
+            
+        </article>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container-footer">
+            <div class="box-footer">
+                <div class="logo">
+                    <a href="inicio.html">
+                        <img class="logofooter" src="IMG/LogoMinimalista (2).svg" alt="">
+                    </a>
+                </div>
+                <div class="terms">
+                    <p> ¡Conduce con responsabilidad y ayuda a salvar vidas!</p>
+                </div>
+            </div>
+            <!-- <div class="box-footer">
+                <h2>Prueba1</h2>
+                <a href="#">info1</a>
+                <a href="#">info2</a>
+                <a href="#">info3</a>
+                <a href="#">info4</a>
+            </div>-->
+
+            <div class="box-footer">
+                <h2>Menú</h2>
+                <a href="comunidad.html">Comunidad</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="https://www.digesett.gob.do/" target="_blank">Digesett</a>
+                <a href="https://intrant.gob.do/index.php" target="_blank">Intrant</a>
+            </div>
+
+            <div class="box-footer">
+                <h2>Redes</h2>
+                <a href="https://www.facebook.com/profile.php?id=100090470194961" target="_blank"> <i
+                        class="fa-brands fa-square-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/cuidandolavidaalconducir/" target="_blank"> <i
+                        class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://twitter.com/CLVAC_RD" target="_blank"> <i class="fa-brands fa-twitter"></i> Twitter</a>
+                <a href="https://www.youtube.com/channel/UCpHDKNi6QFAM7MFmRfom_lw" target="_blank"> <i
+                        class="fa-brands fa-youtube"></i> Youtube</a>
+            </div>
+
+        </div>
+        <div class="box-copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2023 <b>Educación Vial.</b></p>
+        </div>
+    </footer>
+</body>
